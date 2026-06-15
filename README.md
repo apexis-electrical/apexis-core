@@ -108,10 +108,10 @@ engine.export_results(
 
 ## 🏛️ Coherencia Física y Normativa (AEA 90364)
 
-El motor ejecuta de forma estricta el lazo iterativo de inecuaciones dictadas por la ley eléctrica:
-1.  **Criterio Térmico (Sobrecarga)**: $I_B \le I_n \le I_Z$ (Aplica factores climáticos $f_t$ y de agrupamiento $f_g$).
-2.  **Criterio de Caída de Tensión ($\Delta U_{\%}$)**: Método de Gradiente de Caída (GDC s/ 771.19.7.c) calculando el lazo completo sin factores duplicados. Descarta secciones comerciales hasta clavar el límite legal (3.0% para iluminación/tomas, 5.0% para fuerza motriz).
-3.  **Solicitación de Cortocircuito**: Verificación adiabática transitoria de energía pasante ($I^2t \le k^2S^2$).
+1. **Criterio Térmico (Sobrecarga)**: $I_B \le I_n \le I_Z$ (Aplica factores climáticos $f_t$ y de agrupamiento $f_g$).
+2. **Criterio de Caída de Tensión ($`\Delta U_{\%}`$)**: Método de Gradiente de Caída (GDC s/ 771.19.7.c) calculando el lazo completo sin factores duplicados. Descarta secciones comerciales hasta clavar el límite legal (3.0% para iluminación/tomas, 5.0% para fuerza motriz).
+3. **Solicitación de Cortocircuito**: Verificación adiabática transitoria de energía pasante ($I^2t \le k^2S^2$).
+
 
 ## 📄 Licencia
 
