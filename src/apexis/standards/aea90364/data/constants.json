@@ -1,0 +1,26 @@
+{
+  "file": "src/apexis/standards/aea90364/data/constants.json",
+  "description": "Constantes térmicas y gradientes de caída de tensión unitarios según AEA 90364",
+
+  "k_values": {
+    "Cu": {
+      "PVC": 115,
+      "XLPE": 143
+    },
+    "Al": {
+      "PVC": 76,
+      "XLPE": 94
+    }
+  },
+
+  "gdc_defaults": {
+    "CU": {
+      "1PH": 0.040,
+      "3PH": 0.035
+    },
+    "AL": {
+      "1PH": 0.063,
+      "3PH": 0.055
+    }
+  }
+}
