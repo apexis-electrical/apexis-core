@@ -1,0 +1,135 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apexis-core"
+version = "3.1.0"
+description = "DV-APEXIS-Core: Core calculation engine for standardized electrical design."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+
+authors = [
+    { name = "Daniel Alejandro Villena Hernandez", email = "ingenierovillena@gmail.com" }
+]
+
+keywords = [
+    "electrical",
+    "aea90364",
+    "cable sizing",
+    "ampacity",
+    "power systems"
+]
+
+classifiers = [
+    "Development Status :: 1 - Beta",
+    "Intended Audience :: Engineering",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent"
+]
+
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/apexis-electrical/apexis-core"
+Repository = "https://github.com/apexis-electrical/apexis-core"
+
+# -------------------------------------------------------
+# PACKAGE DISCOVERY
+# -------------------------------------------------------
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# -------------------------------------------------------
+# PACKAGE DATA (CRÍTICO)
+# -------------------------------------------------------
+
+[tool.setuptools.package-data]
+apexis = [
+    "standards/aea90364/data/*.json"
+]
+
+# -------------------------------------------------------
+# PYTEST
+# -------------------------------------------------------
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-v"
+
+# -------------------------------------------------------
+# RUFF (LINT + FORMAT)
+# -------------------------------------------------------
+
+# RUFF Manual = ruff check . --select E,F,I,B,UP,ARG,RET,SIM --fix --exclude "tests/test_*.py,examples/*"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+exclude = [
+    ".git",
+    ".pytest_cache",
+    "__pycache__",
+    "build",
+    "dist",
+    ".venv",
+    "venv",
+    "tests/test_*.py",
+    "examples/*"
+]
+
+# -------------------------------------------------------
+# LINT RULES
+# -------------------------------------------------------
+
+[tool.ruff.lint]
+
+select = [
+    "E",   # pycodestyle (errors)
+    "F",   # pyflakes
+    "I",   # imports (isort)
+    "B",   # bugbear (errores sutiles reales)
+    "UP",  # modernización (pyupgrade)
+    "ARG", # unused arguments
+    "RET", # returns
+    "SIM", # flake8-simplify (simplificación de código)
+]
+
+#select = ["ALL"]
+
+ignore = [
+    "E501",  # line-length manejado por formatter
+]
+
+# -------------------------------------------------------
+# PER-FILE RULES
+# -------------------------------------------------------
+
+[tool.ruff.lint.per-file-ignores]
+
+# prints permitidos en debugging
+"tests/**/*.py" = ["T201"]
+
+# -------------------------------------------------------
+# IMPORT SORTING (ISORT)
+# -------------------------------------------------------
+
+[tool.ruff.lint.isort]
+
+known-first-party = ["apexis"]
+combine-as-imports = true
+
+# -------------------------------------------------------
+# FORMATTER
+# -------------------------------------------------------
+
+[tool.ruff.format]
+
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
