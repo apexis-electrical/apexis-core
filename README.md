@@ -1,11 +1,11 @@
 # APEXIS Core
 
-[![CI Workflow](https://github.com)](https://github.com)
-[![PyPI version](https://shields.io)](https://pypi.org)
-[![Python versions](https://shields.io)](https://pypi.org)
-[![License: BSD 3-Clause](https://shields.io)](https://opensource.org)
-[![PyPI downloads](https://shields.io)](https://pypistats.org)
-[![Code Style: Ruff](https://shields.io)](https://github.com)
+[![CI](https://github.com)](https://github.com)
+[![Version](https://shields.io)](https://pypi.org)
+[![Python](https://shields.io)](https://pypi.org)
+[![License](https://shields.io)](https://opensource.org)
+[![Lint](https://shields.io)](https://github.com)
+
 
 **APEXIS Core** es un motor de cálculo y dimensionamiento iterativo de alta velocidad y nivel corporativo para ingeniería eléctrica. Diseñado bajo los principios de **Arquitectura Hexagonal** y optimizado a nivel de microsegundos de CPU mediante el bloqueo de mallas físicas (`__slots__`), permite automatizar las inecuaciones técnicas de normativas internacionales de forma totalmente agnóstica y escalable.
 

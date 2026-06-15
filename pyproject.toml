@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "apexis-core"
-version = "3.1.0"
+version = "1.0.0"
 description = "DV-APEXIS-Core: Core calculation engine for standardized electrical design."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -23,7 +23,7 @@ keywords = [
 ]
 
 classifiers = [
-    "Development Status :: 1 - Beta",
+    "Development Status :: 1 - Alpha",
     "Intended Audience :: Engineering",
     "License :: OSI Approved :: BSD License",
     "Programming Language :: Python :: 3.10",
