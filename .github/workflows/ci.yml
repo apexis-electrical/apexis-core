@@ -57,7 +57,9 @@ jobs:
           pip install pytest
 
       - name: Run Tests
-        run: pytest -q
+        run: |
+          export PYTHONPATH=src
+          pytest -q
 
   build:
     needs: test
