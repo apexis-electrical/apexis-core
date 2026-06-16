@@ -51,6 +51,13 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: "pip"
 
+      # Instalación del binario oficial de Pandoc en el contenedor de GitHub Actions
+      - name: Set up Pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+        with:
+          pandoc-version: "3.1.11" # Versión estable recomendada para compilaciones de Word
+
+      # El comando 'pip install -e .' leerá pypandoc desde tus dependencies en pyproject.toml
       - name: Install dependencies
         run: |
           pip install -e .

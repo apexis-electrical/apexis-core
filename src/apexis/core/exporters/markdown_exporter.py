@@ -1,4 +1,5 @@
-"""Archivo: src/apexis/core/exporters/markdown_exporter.py
+"""
+Archivo: src/apexis/core/exporters/markdown_exporter.py
 Descripción: Exportador de infraestructura especializado en renderizar memorias
              técnicas en formato Markdown (.md). Optimizado con __slots__.
 """
@@ -10,7 +11,8 @@ from apexis.core.interfaces.exporter import ReportExporterInterface
 
 
 class MarkdownReportExporter(ReportExporterInterface):
-    """Generador de reportes encargado de procesar mallas de strings para construir
+    """
+    Generador de reportes encargado de procesar mallas de strings para construir
     tablas en Markdown e inyectarlas de forma transparente en las plantillas normativas.
     """
 
@@ -18,7 +20,8 @@ class MarkdownReportExporter(ReportExporterInterface):
     __slots__ = ("_template_path",)
 
     def __init__(self, template_path: str | None = None) -> None:
-        """Inicializa el exportador fijando la ubicación de la plantilla detallada.
+        """
+        Inicializa el exportador fijando la ubicación de la plantilla detallada.
         """
         if template_path is None:
             # Apunta por defecto a la ruta exacta del subdirectorio de templates
@@ -29,8 +32,14 @@ class MarkdownReportExporter(ReportExporterInterface):
         else:
             self._template_path = pathlib.Path(template_path)
 
+    @property
+    def resolved_extension(self) -> str:
+        """Informa al motor que este plugin genera archivos Markdown nativos."""
+        return ".md"
+
     def export_report(self, results_table: list[dict[str, Any]], output_path: str) -> bool:
-        """Lee la plantilla detallada, genera la tabla de alineación en Markdown,
+        """
+        Lee la plantilla detallada, genera la tabla de alineación en Markdown,
         reemplaza el token {{RESULTS_TABLE}} y persiste el archivo final en disco.
         """
         template_file = pathlib.Path(self._template_path)

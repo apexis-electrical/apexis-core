@@ -1,4 +1,5 @@
-"""Archivo: examples/basic_sizing_simulation.py
+"""
+Archivo: examples/basic_sizing_simulation.py
 Descripción: Script de ejemplo formal que demuestra el uso end-to-end de APEXIS Core
              para el dimensionamiento de conductores bajo la norma AEA 90364.
              Actualizado para utilizar el pipeline simplificado de plugins de exportación.
@@ -6,11 +7,12 @@ Descripción: Script de ejemplo formal que demuestra el uso end-to-end de APEXIS
 
 import pprint
 
-from apexis import APEXISEngine, ElectricalStandardEnum, MarkdownReportExporter
+from apexis import APEXISEngine, ElectricalStandardEnum, MarkdownReportExporter, PandocReportExporter
 
 
 def main() -> None:
-    """Simulación de cálculo de dimensionamiento e ingeniería para un lote de circuitos.
+    """
+    Simulación de cálculo de dimensionamiento e ingeniería para un lote de circuitos.
     """
     print("=" * 70)
     print("APEXIS Core Sizing Engine - Simulación Oficial")
@@ -118,6 +120,7 @@ def main() -> None:
     # Inicializamos el pipeline de complementos (puedes sumar más formatos en paralelo)
     exporters_pipeline = [
         MarkdownReportExporter(),
+        PandocReportExporter(),  # Plugin que autogenera .md y .docx en simultáneo con estilos
         # DocxReportExporter(),   # Descomentar al implementar tu plugin de Word
         # PDFReportExporter(),    # Descomentar al implementar tu plugin de PDF
     ]
