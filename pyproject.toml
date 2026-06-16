@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "apexis-core"
-version = "1.0.0"
+version = "1.1.0"
 description = "DV-APEXIS-Core: Core calculation engine for standardized electrical design."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -30,7 +30,9 @@ classifiers = [
     "Operating System :: OS Independent"
 ]
 
-dependencies = []
+dependencies = [
+    "pypandoc>=1.13"
+]
 
 [project.urls]
 Homepage = "https://github.com/apexis-electrical/apexis-core"
@@ -49,8 +51,12 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 apexis = [
-    "standards/aea90364/data/*.json"
+    "standards/aea90364/data/*.json",
+    "standards/aea90364/templates/*.md"
 ]
+
+[tool.setuptools.data-files]
+"templates" = ["templates/plantilla.docx"]
 
 # -------------------------------------------------------
 # PYTEST

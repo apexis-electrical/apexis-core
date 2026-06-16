@@ -368,7 +368,7 @@ A continuación se presentan los resultados del cálculo de dimensionamiento de 
 Tabla de Resultados del Dimensionamiento y Verificación de los Circuitos
 :::
 
-Los resultados obtenidos cumplen con los criterios de dimensionamiento implementados, conforme a los lineamientos de la reglamentación AEA 90364,garantizando condiciones adecuadas de seguridad, funcionamiento y protección de los conductores.
+Los resultados obtenidos cumplen con los criterios de dimensionamiento implementados, conforme a los lineamientos de la reglamentación AEA 90364, garantizando condiciones adecuadas de seguridad, funcionamiento y protección de los conductores.
 
 # Referencias técnicas
 

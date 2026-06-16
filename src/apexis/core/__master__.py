@@ -14,6 +14,7 @@ from apexis.core.domain.entities import (
     ShortCircuitParameters,
 )
 from apexis.core.exporters.markdown_exporter import MarkdownReportExporter
+from apexis.core.exporters.pandoc_exporter import PandocReportExporter
 from apexis.core.utils.converters import PowerConverter
 from apexis.standards.factory import ElectricalStandardEnum, StandardAdapterFactory
 
@@ -28,6 +29,7 @@ __all__ = (
     "ElectricalStandardEnum",
     "InstallationParameters",
     "MarkdownReportExporter",
+    "PandocReportExporter",
     "PowerConverter",
     "ShortCircuitParameters",
     "StandardAdapterFactory",
