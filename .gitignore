@@ -1,8 +1,5 @@
 ########################################################
 # FILE: .gitignore
-#
-# LEAD AUTHOR: Daniel A. Villena H.
-# CONTACT: ingenierovillena@gmail.com
 ########################################################
 
 ########################################################
@@ -12,7 +9,7 @@
 Thumbs.db
 ehthumbs.db
 desktop.ini
-$RECYCLE.BIN/
+`$RECYCLE.BIN/
 *.tmp
 *.temp
 *.bak
@@ -23,7 +20,7 @@ $RECYCLE.BIN/
 *.log
 *.cache
 *.backup
-~$*
+~`$*
 ~*.tmp
 *.xlsx#
 
@@ -41,19 +38,20 @@ $RECYCLE.BIN/
 *.dwf
 *.dwl
 *.dwl2
-*.sv$
-*.ac$
+*.sv`$
+*.ac`$
 
 # SolidWorks
 *~sw?
 *.lyr
 *.bnp
 *.out
-*.$$$
+*.`$`$`$
 
 # Inventor
 *.ipj
 *.autobak
+OldVersions/
 
 # FreeCAD
 *.fcstd1
@@ -182,3 +180,12 @@ venv/
 # OUTPUTS
 ########################################################
 outputs/
+output/
+released/*.docx
+released/*.md
+management/
+
+########################################################
+# FUNCIONES PERSONALES DE PROPIEDAD D.A.V.H.
+########################################################
+kanboard-git-cli.ps1
